@@ -19,12 +19,11 @@ function ProductCard({ obra, index = 0 }) {
         className="border border-border rounded-crisp overflow-hidden card-hover bg-card"
         onClick={() => navigate(`/catalogo/${obra.slug}`)}
       >
-        <div className="aspect-[4/3] overflow-hidden bg-bone">
+        <div className="aspect-[4/3] overflow-hidden bg-border relative">
           <img
             src={obra.imagenUrl}
             alt={obra.nombre}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-            loading="lazy"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
           />
         </div>
         <div className="p-4">
