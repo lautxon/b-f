@@ -12,32 +12,64 @@ function ProductCard({ obra, index = 0 }) {
 
   return (
     <div
-      className="group cursor-pointer animate-on-scroll"
+      className="group cursor-pointer"
       style={{ animationDelay: `${index * 80}ms` }}
     >
       <div
-        className="border border-border rounded-crisp overflow-hidden card-hover bg-card"
+        className="border border-border rounded-crisp overflow-hidden card-hover"
+        style={{ backgroundColor: '#2A1A18' }}
         onClick={() => navigate(`/catalogo/${obra.slug}`)}
       >
-        <div className="aspect-[4/3] overflow-hidden bg-border">
+        <div style={{ width: '100%', paddingTop: '75%', position: 'relative' }}>
           <img
             src={obra.imagenUrl}
             alt={obra.nombre}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              transition: 'transform 500ms ease',
+              display: 'block',
+            }}
+            onMouseEnter={(e) => { e.target.style.transform = 'scale(1.02)' }}
+            onMouseLeave={(e) => { e.target.style.transform = 'scale(1)' }}
           />
         </div>
-        <div className="p-4">
-          <h3 className="font-serif text-lg text-ink mb-1 group-hover:text-terracotta transition-colors">
+        <div style={{ padding: '16px' }}>
+          <h3 style={{
+            fontFamily: "'Lora', 'Domine', 'Playfair Display', serif",
+            fontSize: '1.125rem',
+            color: '#F0E6E0',
+            marginBottom: '4px',
+            transition: 'color 200ms ease',
+          }}>
             {obra.nombre}
           </h3>
-          <p className="text-xs text-muted mb-3">{obra.tecnica}</p>
-          <div className="flex items-center justify-between">
-            <span className="text-sm font-medium text-charcoal">
+          <p style={{
+            fontSize: '0.75rem',
+            color: '#9B8A82',
+            marginBottom: '12px',
+          }}>
+            {obra.tecnica}
+          </p>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}>
+            <span style={{
+              fontSize: '0.875rem',
+              fontWeight: 500,
+              color: '#D4C4BA',
+            }}>
               {formattedPrice}
             </span>
             <ArrowUpRight
               size={16}
-              className="text-muted group-hover:text-ink transition-colors"
+              style={{ color: '#9B8A82', transition: 'color 200ms ease' }}
             />
           </div>
         </div>

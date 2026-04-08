@@ -62,11 +62,27 @@ function Detalle() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
           {/* Imagen */}
-          <div className="aspect-[4/5] rounded-crisp overflow-hidden border border-border bg-border">
+          <div
+            className="border border-border rounded-crisp overflow-hidden"
+            style={{
+              width: '100%',
+              paddingTop: '125%',
+              position: 'relative',
+              backgroundColor: '#3D2A25',
+            }}
+          >
             <img
               src={obra.imagenUrl}
               alt={obra.nombre}
-              className="w-full h-full object-cover"
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                display: 'block',
+              }}
             />
           </div>
 
@@ -85,7 +101,7 @@ function Detalle() {
             <div className="space-y-4 mb-8">
               <div>
                 <p className="text-xs uppercase tracking-[0.1em] text-muted mb-1">
-                  Año de creacion
+                  Ano de creacion
                 </p>
                 <p className="text-charcoal">{obra.anoCreacion}</p>
               </div>

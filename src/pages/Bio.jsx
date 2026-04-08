@@ -4,11 +4,22 @@ function Bio() {
       <div className="max-w-5xl mx-auto px-6">
         {/* Hero Bio */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mb-20">
-          <div className="aspect-[4/5] rounded-crisp overflow-hidden border border-border bg-border">
+          <div
+            className="border border-border rounded-crisp overflow-hidden"
+            style={{ width: '100%', paddingTop: '125%', position: 'relative', backgroundColor: '#3D2A25' }}
+          >
             <img
               src="https://picsum.photos/seed/aurelia-iruya/800/1000"
               alt="Aurelia Diaz en su taller de Iruya"
-              className="w-full h-full object-cover"
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                display: 'block',
+              }}
             />
           </div>
 
