@@ -1,0 +1,15 @@
+{
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm install",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ],
+  "env": {
+    "VITE_SUPABASE_URL": "https://zoppogrdlmswqiybhcmh.supabase.co",
+    "VITE_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpvcHBvZ3JkbG1zd3FpeWJoY21oIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU2MDA2MjYsImV4cCI6MjA5MTE3NjYyNn0.HGnE3bmuTmtCl5aNc7vlkBRBZV8u_sll7ghMnUABzM0",
+    "VITE_EXCHANGE_RATE_API_URL": "https://api.exchangerate-api.com/v4/latest/",
+    "VITE_SITE_URL": "https://b-f.vercel.app"
+  }
+}
