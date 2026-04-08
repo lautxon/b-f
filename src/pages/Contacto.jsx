@@ -102,7 +102,7 @@ function Contacto() {
                   </div>
                 </div>
                 <a
-                  href="https://www.bancomacro.com.ar"
+                  href="https://www.macro.com.ar/home-page"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-xs text-ocre hover:text-terracotta-light transition-colors mt-3"

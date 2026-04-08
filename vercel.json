@@ -4,6 +4,10 @@
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "rewrites": [
+    { "source": "/images/:filename", "destination": "/images/:filename" },
+    { "source": "/manifest.json", "destination": "/manifest.json" },
+    { "source": "/icons/:filename", "destination": "/icons/:filename" },
+    { "source": "/assets/:filename", "destination": "/assets/:filename" },
     { "source": "/(.*)", "destination": "/" }
   ],
   "env": {
