@@ -4,11 +4,11 @@ function Bio() {
       <div className="max-w-5xl mx-auto px-6">
         {/* Hero Bio */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mb-20">
-          <div className="aspect-[4/5] rounded-crisp overflow-hidden border border-border bg-border relative">
+          <div className="aspect-[4/5] rounded-crisp overflow-hidden border border-border bg-border">
             <img
               src="/images/aurelia-diaz.jpg"
               alt="Aurelia Diaz en su taller de Iruya"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="w-full h-full object-cover"
               onError={(e) => {
                 e.target.src = 'https://picsum.photos/seed/aureliaceramista/800/1000'
               }}

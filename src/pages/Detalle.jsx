@@ -62,11 +62,11 @@ function Detalle() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
           {/* Imagen */}
-          <div className="aspect-[4/5] rounded-crisp overflow-hidden border border-border bg-border relative">
+          <div className="aspect-[4/5] rounded-crisp overflow-hidden border border-border bg-border">
             <img
               src={obra.imagenUrl}
               alt={obra.nombre}
-              className="absolute inset-0 w-full h-full object-cover"
+              className="w-full h-full object-cover"
             />
           </div>
 
