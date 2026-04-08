@@ -11,10 +11,10 @@ function Home() {
       {/* Hero */}
       <section className="relative py-32 md:py-48 border-b border-border">
         <div
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.04]"
           style={{
             backgroundImage: `radial-gradient(circle at 30% 50%, #C4775B 0%, transparent 50%),
-                              radial-gradient(circle at 70% 30%, #C4A35A 0%, transparent 50%)`,
+                              radial-gradient(circle at 70% 30%, #8B3A2F 0%, transparent 50%)`,
           }}
         />
         <div className="relative max-w-5xl mx-auto px-6 text-center">
@@ -37,9 +37,9 @@ function Home() {
             </button>
             <button
               className="btn-secondary"
-              onClick={() => navigate('/contacto')}
+              onClick={() => navigate('/bio')}
             >
-              Contactar
+              Conoce a Aurelia
             </button>
           </div>
         </div>
@@ -81,7 +81,7 @@ function Home() {
           </h2>
           <p className="text-charcoal leading-relaxed mb-4">
             Aurelia Diaz trabaja la arcilla de Iruya con las tecnicas que
-            aprendio de su familia y perfecciono a lo largo de años. Cada
+            aprendio de su familia y perfecciono a lo largo de anos. Cada
             pieza es modelada a mano, secada al sol de montana y cocida en
             horno de lena a mas de 900 grados.
           </p>
@@ -90,6 +90,12 @@ function Home() {
             ocres, tonos ahumados y blancos hueso. La paleta de los Valles
             Calchaquies hecha objeto.
           </p>
+          <button
+            className="btn-secondary mt-8"
+            onClick={() => navigate('/bio')}
+          >
+            Leer mas sobre Aurelia
+          </button>
         </div>
       </section>
     </div>

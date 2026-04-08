@@ -37,8 +37,8 @@ function Catalogo() {
               onClick={() => setCategoriaActiva(cat.id)}
               className={`px-4 py-2 text-sm rounded-full transition-all duration-200 ${
                 categoriaActiva === cat.id
-                  ? 'bg-ink text-white'
-                  : 'bg-white border border-border text-charcoal hover:bg-card'
+                  ? 'bg-terracotta text-canvas font-medium'
+                  : 'bg-card border border-border text-charcoal hover:bg-card-hover'
               }`}
             >
               {cat.nombre}

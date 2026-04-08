@@ -33,6 +33,11 @@ function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/bio" className="text-sm text-charcoal hover:text-ink transition-colors">
+                  Bio
+                </Link>
+              </li>
+              <li>
                 <Link to="/contacto" className="text-sm text-charcoal hover:text-ink transition-colors">
                   Contacto
                 </Link>

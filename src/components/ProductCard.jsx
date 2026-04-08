@@ -16,7 +16,7 @@ function ProductCard({ obra, index = 0 }) {
       style={{ animationDelay: `${index * 80}ms` }}
     >
       <div
-        className="border border-border rounded-crisp overflow-hidden card-hover bg-white"
+        className="border border-border rounded-crisp overflow-hidden card-hover bg-card"
         onClick={() => navigate(`/catalogo/${obra.slug}`)}
       >
         <div className="aspect-[4/3] overflow-hidden bg-bone">

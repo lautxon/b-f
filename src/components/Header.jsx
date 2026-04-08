@@ -6,7 +6,7 @@ function Header() {
   const isActive = (path) => location.pathname === path
 
   return (
-    <header className="sticky top-0 z-50 bg-canvas/80 backdrop-blur-md border-b border-border">
+    <header className="sticky top-0 z-50 bg-canvas/90 backdrop-blur-md border-b border-border">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link to="/" className="flex flex-col">
           <span className="font-serif text-xl tracking-tight text-ink leading-tight">
@@ -27,6 +27,16 @@ function Header() {
             }`}
           >
             Catalogo
+          </Link>
+          <Link
+            to="/bio"
+            className={`text-sm tracking-wide transition-colors duration-200 ${
+              isActive('/bio')
+                ? 'text-ink font-medium'
+                : 'text-muted hover:text-ink'
+            }`}
+          >
+            Bio
           </Link>
           <Link
             to="/contacto"

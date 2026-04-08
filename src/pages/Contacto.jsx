@@ -1,4 +1,4 @@
-import { EnvelopeSimple, MapPin, CurrencyDollar, Wallet } from '@phosphor-icons/react'
+import { EnvelopeSimple, MapPin, CurrencyDollar, Wallet, Link } from '@phosphor-icons/react'
 
 function Contacto() {
   return (
@@ -53,24 +53,73 @@ function Contacto() {
               <h3 className="text-sm font-medium text-ink mb-4">
                 Medios de pago
               </h3>
-              <ul className="space-y-3">
-                <li className="flex items-center gap-3 text-sm text-charcoal">
-                  <Wallet size={16} className="text-muted flex-shrink-0" />
-                  Mercado Pago -- Alias: <span className="font-mono text-xs bg-card border border-border px-2 py-0.5 rounded">Barro&Fuego</span>
-                </li>
-                <li className="flex items-center gap-3 text-sm text-charcoal">
-                  <CurrencyDollar size={16} className="text-muted flex-shrink-0" />
-                  Banco Macro de Salta
-                </li>
-              </ul>
+
+              {/* Mercado Pago */}
+              <div className="mb-5 p-4 rounded-crisp bg-card border border-border">
+                <div className="flex items-center gap-3 mb-3">
+                  <Wallet size={18} className="text-terracotta" />
+                  <span className="text-sm font-medium text-ink">
+                    Mercado Pago
+                  </span>
+                </div>
+                <div className="flex items-center justify-between gap-3 mb-2">
+                  <span className="text-xs text-muted">Alias:</span>
+                  <span className="font-mono text-xs bg-canvas border border-border px-2 py-1 rounded text-charcoal">
+                    Barro&Fuego
+                  </span>
+                </div>
+                <a
+                  href="https://www.mercadopago.com.ar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-xs text-terracotta hover:text-terracotta-light transition-colors"
+                >
+                  <Link size={12} />
+                  Ir a Mercado Pago
+                </a>
+              </div>
+
+              {/* Banco Macro */}
+              <div className="p-4 rounded-crisp bg-card border border-border">
+                <div className="flex items-center gap-3 mb-3">
+                  <CurrencyDollar size={18} className="text-ocre" />
+                  <span className="text-sm font-medium text-ink">
+                    Banco Macro de Salta
+                  </span>
+                </div>
+                <div className="space-y-2 text-xs text-charcoal">
+                  <div className="flex justify-between">
+                    <span className="text-muted">Titular:</span>
+                    <span>Aurelia Diaz</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-muted">CBU:</span>
+                    <span className="font-mono">2850594940094949494949</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-muted">Alias:</span>
+                    <span className="font-mono">BARRO.FUEGO.MPAGO</span>
+                  </div>
+                </div>
+                <a
+                  href="https://www.bancomacro.com.ar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-xs text-ocre hover:text-terracotta-light transition-colors mt-3"
+                >
+                  <Link size={12} />
+                  Ir a Banco Macro
+                </a>
+              </div>
+
               <p className="text-xs text-muted mt-4">
-                Para compras desde el exterior, consultar por correo para coordinar el medio de pago internacional.
+                Para compras desde el exterior, consultar por correo para coordinar el medio de pago internacional (PayPal, transferencia, etc.).
               </p>
             </div>
           </div>
 
           {/* Formulario simple */}
-          <div className="border border-border rounded-crisp p-8 bg-white">
+          <div className="border border-border rounded-crisp p-8 bg-card">
             <h2 className="font-serif text-xl text-ink mb-6">
               Enviar consulta
             </h2>
@@ -82,7 +131,7 @@ function Contacto() {
                 <input
                   type="text"
                   id="nombre"
-                  className="w-full px-3 py-2.5 text-sm border border-border rounded-crisp bg-canvas focus:outline-none focus:border-charcoal transition-colors"
+                  className="w-full px-3 py-2.5 text-sm border border-border rounded-crisp bg-canvas focus:outline-none focus:border-terracotta transition-colors"
                   placeholder="Tu nombre"
                 />
               </div>
@@ -93,7 +142,7 @@ function Contacto() {
                 <input
                   type="email"
                   id="email"
-                  className="w-full px-3 py-2.5 text-sm border border-border rounded-crisp bg-canvas focus:outline-none focus:border-charcoal transition-colors"
+                  className="w-full px-3 py-2.5 text-sm border border-border rounded-crisp bg-canvas focus:outline-none focus:border-terracotta transition-colors"
                   placeholder="tu@email.com"
                 />
               </div>
@@ -104,7 +153,7 @@ function Contacto() {
                 <textarea
                   id="mensaje"
                   rows={5}
-                  className="w-full px-3 py-2.5 text-sm border border-border rounded-crisp bg-canvas focus:outline-none focus:border-charcoal transition-colors resize-none"
+                  className="w-full px-3 py-2.5 text-sm border border-border rounded-crisp bg-canvas focus:outline-none focus:border-terracotta transition-colors resize-none"
                   placeholder="Tu consulta..."
                 />
               </div>

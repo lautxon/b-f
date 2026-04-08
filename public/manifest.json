@@ -4,8 +4,8 @@
   "description": "Catalogo online de ceramica artesanal de Aurelia Diaz, Iruya, Salta, Argentina.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FBFBFA",
-  "theme_color": "#FBFBFA",
+  "background_color": "#1C1210",
+  "theme_color": "#1C1210",
   "orientation": "portrait-primary",
   "icons": [
     {

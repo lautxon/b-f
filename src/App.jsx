@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import Catalogo from './pages/Catalogo'
 import Detalle from './pages/Detalle'
+import Bio from './pages/Bio'
 import Contacto from './pages/Contacto'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/catalogo" element={<Catalogo />} />
           <Route path="/catalogo/:slug" element={<Detalle />} />
+          <Route path="/bio" element={<Bio />} />
           <Route path="/contacto" element={<Contacto />} />
         </Routes>
       </main>
