@@ -6,12 +6,9 @@ function Bio() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mb-20">
           <div className="aspect-[4/5] rounded-crisp overflow-hidden border border-border bg-border">
             <img
-              src="/images/aurelia-diaz.jpg"
+              src="https://picsum.photos/seed/aurelia-iruya/800/1000"
               alt="Aurelia Diaz en su taller de Iruya"
               className="w-full h-full object-cover"
-              onError={(e) => {
-                e.target.src = 'https://picsum.photos/seed/aureliaceramista/800/1000'
-              }}
             />
           </div>
 

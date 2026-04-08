@@ -8,7 +8,7 @@
     "tecnica": "Modelado a mano, coccion en horno de lena",
     "descripcion": "Olla de gran formato para guisos y preparaciones tradicionales. Arcilla roja de la quebrada, vidriado natural con ceniza. Cada pieza es unica por las variaciones del fuego.",
     "precioArs": 45000,
-    "imagenUrl": "/images/olla-grande.jpg",
+    "imagenUrl": "https://picsum.photos/seed/ceramica1/800/600",
     "disponible": true
   },
   {
@@ -20,7 +20,7 @@
     "tecnica": "Torneado, engobe natural, coccion oxidante",
     "descripcion": "Vasija decorativa inspirada en las formas precolombinas de los Valles Calchaquies. Tonos terracota y ocre con incisiones geometricas.",
     "precioArs": 38000,
-    "imagenUrl": "/images/vasija-calchaqui.jpg",
+    "imagenUrl": "https://picsum.photos/seed/ceramica2/800/600",
     "disponible": true
   },
   {
@@ -32,7 +32,7 @@
     "tecnica": "Modelado a mano, vidriado alcala",
     "descripcion": "Botella de cuello largo con vidriado verde cobre. Pieza funcional para conservacion de liquidos o decoracion de interiores.",
     "precioArs": 32000,
-    "imagenUrl": "/images/botella-arcilla.jpg",
+    "imagenUrl": "https://picsum.photos/seed/ceramica3/800/600",
     "disponible": true
   },
   {
@@ -44,7 +44,7 @@
     "tecnica": "Plancha, coccion reductora",
     "descripcion": "Fuente ovalada de 40cm con tonos ahumados. Ideal para servir y llevar a la mesa. Borde irregular que celebra la imperfeccion artesanal.",
     "precioArs": 28000,
-    "imagenUrl": "/images/fuente-iruya.jpg",
+    "imagenUrl": "https://picsum.photos/seed/ceramica4/800/600",
     "disponible": true
   },
   {
@@ -56,7 +56,7 @@
     "tecnica": "Torneado, vidriado transparente",
     "descripcion": "Plato llano de 25cm con vidriado transparente sobre pasta roja. Apto para alimentos. Resistente a lavavajillas.",
     "precioArs": 12000,
-    "imagenUrl": "/images/plato-terracota.jpg",
+    "imagenUrl": "https://picsum.photos/seed/ceramica5/800/600",
     "disponible": true
   },
   {
@@ -68,7 +68,7 @@
     "tecnica": "Torneado, engobe blanco, coccion oxidante",
     "descripcion": "Taza de 300ml con asa ergonomica. Interior vidriado blanco, exterior en tono hueso natural. Perfecta para mate o cafe.",
     "precioArs": 9500,
-    "imagenUrl": "/images/taza-desayuno.jpg",
+    "imagenUrl": "https://picsum.photos/seed/ceramica6/800/600",
     "disponible": true
   },
   {
@@ -80,7 +80,7 @@
     "tecnica": "Torneado, pasta con chamota",
     "descripcion": "Vaso bajo de textura arenosa natural. La chamota incorporada a la arcilla le da una superficie tactil unica. Capacidad 250ml.",
     "precioArs": 8500,
-    "imagenUrl": "/images/vaso-arena.jpg",
+    "imagenUrl": "https://picsum.photos/seed/ceramica7/800/600",
     "disponible": true
   },
   {
@@ -92,7 +92,7 @@
     "tecnica": "Modelado a mano, vidriado reactivo",
     "descripcion": "Cuenco amplio de 20cm con vidriado reactivo en tonos tierra. Ideal para ensaladas o presentaciones rusticas.",
     "precioArs": 14000,
-    "imagenUrl": "/images/cuenco-barro.jpg",
+    "imagenUrl": "https://picsum.photos/seed/ceramica8/800/600",
     "disponible": true
   },
   {
@@ -104,7 +104,7 @@
     "tecnica": "Torneado, asa acoplada, coccion oxidante",
     "descripcion": "Jarra de 1 litro con asa ergonomica y pico vertedor. Tonos calidos naturales. Perfecta para agua o jugos.",
     "precioArs": 22000,
-    "imagenUrl": "/images/jarra-ceramica.jpg",
+    "imagenUrl": "https://picsum.photos/seed/ceramica9/800/600",
     "disponible": true
   },
   {
@@ -116,7 +116,7 @@
     "tecnica": "Torneado, vidriado reactivo",
     "descripcion": "Set de cuatro tazas con vidriado reactivo. Cada una con patron unico de gotas azules sobre base hueso. 250ml c/u.",
     "precioArs": 42000,
-    "imagenUrl": "/images/juego-tazas.jpg",
+    "imagenUrl": "https://picsum.photos/seed/ceramica10/800/600",
     "disponible": true
   },
   {
@@ -128,7 +128,7 @@
     "tecnica": "Modelado a mano, pintura con oxidos",
     "descripcion": "Pieza decorativa con motivos geometricos inspirados en textiles andinos. Colores tierra con detalles en ocre y azul.",
     "precioArs": 22000,
-    "imagenUrl": "/images/adorno-andino.jpg",
+    "imagenUrl": "https://picsum.photos/seed/ceramica11/800/600",
     "disponible": true
   },
   {
@@ -140,7 +140,7 @@
     "tecnica": "Plancha, coccion en horno de lena",
     "descripcion": "Marco para foto de 15x20cm con textura rustica. Tonos variables segun la coccion. Soporte integrado en la parte trasera.",
     "precioArs": 15000,
-    "imagenUrl": "/images/marco-quebrada.jpg",
+    "imagenUrl": "https://picsum.photos/seed/ceramica12/800/600",
     "disponible": true
   },
   {
@@ -152,7 +152,7 @@
     "tecnica": "Cuentas torneadas, vidriado variado, ensamble",
     "descripcion": "Collar artesanal con 24 cuentas de ceramica vidriada en tonos tierra. Hilo de algod encerado. Largo ajustable 45-55cm.",
     "precioArs": 18000,
-    "imagenUrl": "/images/collar-ceramica.jpg",
+    "imagenUrl": "https://picsum.photos/seed/ceramica13/800/600",
     "disponible": true
   },
   {
@@ -164,7 +164,7 @@
     "tecnica": "Modelado a mano, ahumado",
     "descripcion": "Pieza escultorica abstracta inspirada en el viento de los valles. Superficie ahumada con reflejos metalicos naturales. 35cm de alto.",
     "precioArs": 55000,
-    "imagenUrl": "/images/escultura-viento.jpg",
+    "imagenUrl": "https://picsum.photos/seed/ceramica14/800/600",
     "disponible": true
   },
   {
@@ -176,7 +176,7 @@
     "tecnica": "Modelado a mano, coccion oxidante",
     "descripcion": "Pequena figurilla abstracta de 15cm. Arcilla natural sin vidriar. Textura organica que invita al tacto.",
     "precioArs": 12000,
-    "imagenUrl": "/images/figurilla-arcilla.jpg",
+    "imagenUrl": "https://picsum.photos/seed/ceramica15/800/600",
     "disponible": true
   },
   {
@@ -188,7 +188,7 @@
     "tecnica": "Torneado, vidriado interior",
     "descripcion": "Florero alto de 30cm con cuello estrecho. Interior vidriado para retener agua. Exterior en tono terracota natural.",
     "precioArs": 28000,
-    "imagenUrl": "/images/florero-ceramica.jpg",
+    "imagenUrl": "https://picsum.photos/seed/ceramica16/800/600",
     "disponible": true
   },
   {
@@ -200,7 +200,7 @@
     "tecnica": "Modelado a mano, calados",
     "descripcion": "Porta velas con calados geometricos que proyectan sombras en la pared. Diametro 12cm. Vela no incluida.",
     "precioArs": 16000,
-    "imagenUrl": "/images/porta-velas.jpg",
+    "imagenUrl": "https://picsum.photos/seed/ceramica17/800/600",
     "disponible": true
   },
   {
@@ -212,7 +212,7 @@
     "tecnica": "Modelado a mano, drenaje integrado",
     "descripcion": "Maceta decorativa de 18cm con orificio de drenaje. Vidriado exterior en tonos ocre, interior sin vidriar para transpiracion.",
     "precioArs": 20000,
-    "imagenUrl": "/images/maceta-artistica.jpg",
+    "imagenUrl": "https://picsum.photos/seed/ceramica18/800/600",
     "disponible": true
   },
   {
@@ -224,7 +224,7 @@
     "tecnica": "Piezas torneadas, ensamble con cuerda",
     "descripcion": "Campana de viento con 5 tubos de ceramica afinados. Sonido suave y profundo. Cuerda de yute natural.",
     "precioArs": 25000,
-    "imagenUrl": "/images/campana-viento.jpg",
+    "imagenUrl": "https://picsum.photos/seed/ceramica19/800/600",
     "disponible": true
   },
   {
@@ -236,7 +236,7 @@
     "tecnica": "Plancha, pintura con engobes",
     "descripcion": "Plato decorativo de pared con paisaje abstracto de los Valles Calchaquies. 30cm de diametro. Soporte trasero para colgar.",
     "precioArs": 35000,
-    "imagenUrl": "/images/plato-decorativo.jpg",
+    "imagenUrl": "https://picsum.photos/seed/ceramica20/800/600",
     "disponible": true
   }
 ]
