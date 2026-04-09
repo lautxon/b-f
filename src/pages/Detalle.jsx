@@ -4,6 +4,7 @@ import catalogSeed from '../data/catalog-seed.json'
 import { useEffect, useState } from 'react'
 import { injectProductSchema } from '../lib/seo'
 import { useSEO } from '../hooks/useSEO'
+import { ShippingEstimator } from '../components/ShippingEstimator'
 
 function Detalle() {
   const { slug } = useParams()
@@ -185,6 +186,11 @@ function Detalle() {
                 <EnvelopeSimple size={16} />
                 Consultar
               </button>
+            </div>
+
+            {/* Estimador de envio */}
+            <div className="mt-8">
+              <ShippingEstimator obra={obra} />
             </div>
           </div>
         </div>

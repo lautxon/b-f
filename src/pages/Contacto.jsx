@@ -1,5 +1,6 @@
-import { EnvelopeSimple, MapPin, CurrencyDollar, Wallet, Link } from '@phosphor-icons/react'
+import { EnvelopeSimple, MapPin, CurrencyDollar, Wallet, Link, Package } from '@phosphor-icons/react'
 import { useSEO } from '../hooks/useSEO'
+import { ShippingEstimator } from '../components/ShippingEstimator'
 
 function Contacto() {
   useSEO({
@@ -157,6 +158,11 @@ function Contacto() {
               <p className="text-xs text-muted mt-4">
                 Para compras desde el exterior, consultar por correo para coordinar el medio de pago internacional (PayPal, transferencia, etc.).
               </p>
+
+              {/* Estimador de envio */}
+              <div className="mt-6">
+                <ShippingEstimator />
+              </div>
             </div>
           </div>
 
