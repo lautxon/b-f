@@ -138,6 +138,12 @@ function Home() {
             >
               Ver el proceso creativo
             </button>
+            <button
+              className="btn-secondary"
+              onClick={() => navigate('/testimonios')}
+            >
+              Testimonios
+            </button>
           </div>
         </div>
       </section>

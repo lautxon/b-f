@@ -28,6 +28,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://b-f-ten.vercel.app/testimonios</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://b-f-ten.vercel.app/contacto</loc>
     <lastmod>2025-04-08</lastmod>
     <changefreq>monthly</changefreq>

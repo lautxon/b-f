@@ -1,11 +1,23 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { EnvelopeSimple, MapPin } from '@phosphor-icons/react'
 
 function Footer() {
+  const [email, setEmail] = useState('')
+  const [enviado, setEnviado] = useState(false)
+
+  const handleNewsletter = (e) => {
+    e.preventDefault()
+    if (email) {
+      setEnviado(true)
+      setEmail('')
+    }
+  }
+
   return (
     <footer className="border-t border-border bg-card">
       <div className="max-w-6xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div>
             <h3 className="font-serif text-lg text-ink mb-3">
               Barro & Fuego
@@ -43,6 +55,11 @@ function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/testimonios" className="text-sm text-charcoal hover:text-ink transition-colors">
+                  Testimonios
+                </Link>
+              </li>
+              <li>
                 <Link to="/contacto" className="text-sm text-charcoal hover:text-ink transition-colors">
                   Contacto
                 </Link>
@@ -66,6 +83,35 @@ function Footer() {
                 <span>Iruya, Salta, Argentina</span>
               </li>
             </ul>
+          </div>
+
+          {/* Newsletter */}
+          <div>
+            <h4 className="text-xs uppercase tracking-[0.15em] text-muted mb-4">
+              Novedades
+            </h4>
+            <p className="text-sm text-charcoal mb-4 leading-relaxed">
+              Recibi aviso cuando haya nuevas piezas disponibles.
+            </p>
+            {enviado ? (
+              <p className="text-sm text-terracotta">
+                Gracias! Te avisaremos cuando haya novedades.
+              </p>
+            ) : (
+              <form onSubmit={handleNewsletter} className="space-y-2">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="tu@email.com"
+                  required
+                  className="w-full px-3 py-2 text-sm border border-border rounded-crisp bg-canvas focus:outline-none focus:border-terracotta transition-colors"
+                />
+                <button type="submit" className="btn-primary w-full text-sm py-2">
+                  Suscribirme
+                </button>
+              </form>
+            )}
           </div>
         </div>
 

@@ -6,6 +6,7 @@ import Catalogo from './pages/Catalogo'
 import Detalle from './pages/Detalle'
 import Bio from './pages/Bio'
 import Proceso from './pages/Proceso'
+import Testimonios from './pages/Testimonios'
 import Contacto from './pages/Contacto'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/catalogo/:slug" element={<Detalle />} />
           <Route path="/bio" element={<Bio />} />
           <Route path="/proceso" element={<Proceso />} />
+          <Route path="/testimonios" element={<Testimonios />} />
           <Route path="/contacto" element={<Contacto />} />
         </Routes>
       </main>
