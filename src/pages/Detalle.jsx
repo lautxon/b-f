@@ -47,7 +47,11 @@ function Detalle() {
     minimumFractionDigits: 0,
   }).format(obra.precioArs)
 
+  // Links de pago
   const mpLink = `https://www.mercadopago.com.ar`
+  const paypalEmail = 'aureliadiaz@gmail.com'
+  const paypalSubject = `Compra Barro & Fuego: ${obra.nombre}`
+  const paypalLink = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=${encodeURIComponent(paypalEmail)}&item_name=${encodeURIComponent(paypalSubject)}&amount=${precioEur || ''}&currency_code=EUR`
 
   return (
     <div className="py-16 md:py-24">
@@ -136,7 +140,8 @@ function Detalle() {
             </div>
 
             {/* Botones de accion */}
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col gap-3">
+              {/* Mercado Pago - Argentina */}
               <a
                 href={mpLink}
                 target="_blank"
@@ -145,6 +150,21 @@ function Detalle() {
               >
                 Comprar con Mercado Pago
               </a>
+
+              {/* PayPal - Internacional */}
+              <a
+                href={paypalLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary text-center"
+              >
+                Comprar con PayPal
+              </a>
+
+              <p className="text-xs text-muted text-center mt-1">
+                Mercado Pago para compradores en Argentina. PayPal para compras desde el exterior.
+              </p>
+
               <button
                 className="btn-secondary"
                 onClick={() => navigate('/contacto')}

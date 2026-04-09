@@ -1,25 +1,42 @@
 import { useNavigate } from 'react-router-dom'
 import catalogSeed from '../data/catalog-seed.json'
 import ProductCard from '../components/ProductCard'
+import { useTimeOfDay, getHeroImage, getPeriodLabel } from '../hooks/useTimeOfDay'
 
 function Home() {
   const navigate = useNavigate()
   const destacados = catalogSeed.slice(0, 4)
+  const period = useTimeOfDay()
+  const heroImage = getHeroImage(period)
+  const periodLabel = getPeriodLabel(period)
 
   return (
     <div>
-      {/* Hero */}
-      <section className="relative py-32 md:py-48 border-b border-border">
+      {/* Hero dinamico */}
+      <section className="relative py-32 md:py-48 border-b border-border overflow-hidden">
+        {/* Imagen de fondo segun hora del dia */}
         <div
-          className="absolute inset-0 opacity-[0.04]"
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `url(${heroImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            opacity: 0.08,
+            transition: 'opacity 1s ease',
+          }}
+        />
+        {/* Gradiente sutil */}
+        <div
+          className="absolute inset-0"
           style={{
             backgroundImage: `radial-gradient(circle at 30% 50%, #C4775B 0%, transparent 50%),
                               radial-gradient(circle at 70% 30%, #8B3A2F 0%, transparent 50%)`,
+            opacity: 0.06,
           }}
         />
         <div className="relative max-w-5xl mx-auto px-6 text-center">
           <p className="text-xs uppercase tracking-[0.2em] text-muted mb-6">
-            Iruya, Salta -- 2700 msnm
+            {periodLabel} -- 2700 msnm
           </p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl text-ink mb-6">
             Barro & Fuego
@@ -90,12 +107,20 @@ function Home() {
             ocres, tonos ahumados y blancos hueso. La paleta de los Valles
             Calchaquies hecha objeto.
           </p>
-          <button
-            className="btn-secondary mt-8"
-            onClick={() => navigate('/bio')}
-          >
-            Leer mas sobre Aurelia
-          </button>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+            <button
+              className="btn-secondary"
+              onClick={() => navigate('/bio')}
+            >
+              Leer mas sobre Aurelia
+            </button>
+            <button
+              className="btn-secondary"
+              onClick={() => navigate('/proceso')}
+            >
+              Ver el proceso creativo
+            </button>
+          </div>
         </div>
       </section>
     </div>
