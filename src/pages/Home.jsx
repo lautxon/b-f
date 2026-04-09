@@ -21,25 +21,34 @@ function Home() {
             backgroundImage: `url(${heroImage})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            opacity: 0.25,
+            opacity: 0.40,
             transition: 'opacity 1s ease',
           }}
         />
-        {/* Vignette: bordes oscuros, centro claro */}
+        {/* Vignette: bordes oscuros, centro claro para que el texto sea legible */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: 'radial-gradient(ellipse at center, transparent 20%, rgba(28,18,16,0.6) 70%, rgba(28,18,16,0.95) 100%)',
+            background: 'radial-gradient(ellipse at center, transparent 30%, rgba(28,18,16,0.5) 60%, rgba(28,18,16,0.85) 100%)',
           }}
         />
         <div className="relative max-w-5xl mx-auto px-6 text-center">
-          <p className="text-xs uppercase tracking-[0.2em] text-terracotta mb-6" style={{ letterSpacing: '0.25em' }}>
+          <p className="text-xs uppercase tracking-[0.2em] mb-6" style={{
+            letterSpacing: '0.25em',
+            color: '#D4956F',
+            textShadow: '0 1px 8px rgba(28,18,16,0.8)',
+          }}>
             {periodLabel}
           </p>
-          <p className="text-[10px] uppercase tracking-[0.15em] text-muted mb-8">
+          <p className="text-[10px] uppercase tracking-[0.15em] text-muted mb-8" style={{
+            textShadow: '0 1px 4px rgba(28,18,16,0.6)',
+          }}>
             Iruya, Salta -- 2700 msnm
           </p>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl text-ink mb-6">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl mb-6" style={{
+            color: '#F0E6E0',
+            textShadow: '0 2px 12px rgba(28,18,16,0.7)',
+          }}>
             Barro & Fuego
           </h1>
           <p className="text-lg md:text-xl text-muted max-w-2xl mx-auto leading-relaxed mb-10">

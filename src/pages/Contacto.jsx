@@ -112,6 +112,41 @@ function Contacto() {
                 </a>
               </div>
 
+              {/* PayPal */}
+              <div className="p-4 rounded-crisp bg-card border border-border">
+                <div className="flex items-center gap-3 mb-3">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.37 6.73a.83.83 0 0 0-.57-.32L10.25 6l-.03-.01a.5.5 0 0 0-.49.42l-.93 5.89a.5.5 0 0 0 .49.58h2.44a.5.5 0 0 0 .49-.42l.2-1.25a.83.83 0 0 1 .82-.7h.52a2.58 2.58 0 0 0 2.55-2.16l.29-1.48a.5.5 0 0 0-.49-.62h-.97z" fill="#D4956F"/>
+                    <path d="M12.53 4.21a.83.83 0 0 0-.57-.32L7.4 3.49a.5.5 0 0 0-.49.42L5.46 9.37a.5.5 0 0 0 .49.58h4.97a.5.5 0 0 0 .49-.42l.12-.74a.83.83 0 0 1 .82-.7h.52a2.58 2.58 0 0 0 2.55-2.16l.11-.57a.5.5 0 0 0-.49-.62h-.97l-.54-.53z" fill="#D4956F"/>
+                  </svg>
+                  <span className="text-sm font-medium text-ink">
+                    PayPal
+                  </span>
+                </div>
+                <div className="space-y-2 text-xs text-charcoal">
+                  <div className="flex justify-between">
+                    <span className="text-muted">Email:</span>
+                    <span>aureliadiaz@gmail.com</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-muted">Moneda:</span>
+                    <span>EUR, USD</span>
+                  </div>
+                </div>
+                <a
+                  href="https://www.paypal.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-xs text-terracotta hover:text-terracotta-light transition-colors mt-3"
+                >
+                  <Link size={12} />
+                  Ir a PayPal
+                </a>
+                <p className="text-[10px] text-muted mt-2">
+                  Para compras desde el exterior (Europa, Latinoamerica).
+                </p>
+              </div>
+
               <p className="text-xs text-muted mt-4">
                 Para compras desde el exterior, consultar por correo para coordinar el medio de pago internacional (PayPal, transferencia, etc.).
               </p>
