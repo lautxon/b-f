@@ -2,6 +2,8 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { ArrowLeft, EnvelopeSimple, CurrencyDollar } from '@phosphor-icons/react'
 import catalogSeed from '../data/catalog-seed.json'
 import { useEffect, useState } from 'react'
+import { injectProductSchema } from '../lib/seo'
+import { useSEO } from '../hooks/useSEO'
 
 function Detalle() {
   const { slug } = useParams()
@@ -26,6 +28,10 @@ function Detalle() {
     fetchRate()
   }, [])
 
+  useEffect(() => {
+    if (obra) return injectProductSchema(obra)
+  }, [obra])
+
   if (!obra) {
     return (
       <div className="py-32 text-center">
@@ -36,6 +42,13 @@ function Detalle() {
       </div>
     )
   }
+
+  useSEO({
+    title: `${obra.nombre} — Barro & Fuego`,
+    description: obra.descripcion.slice(0, 150),
+    image: obra.imagenUrl,
+    url: `https://b-f-ten.vercel.app/catalogo/${obra.slug}`,
+  })
 
   const precioEur = eurRate
     ? (obra.precioArs / eurRate).toFixed(2)

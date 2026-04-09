@@ -1,4 +1,12 @@
+import { useSEO } from '../hooks/useSEO'
+
 function Proceso() {
+  useSEO({
+    title: 'El Proceso Creativo — Barro & Fuego',
+    description: 'Ocho etapas del proceso creativo de ceramica artesanal: extraccion, amasado, modelado, secado, coccion y resultado.',
+    url: 'https://b-f-ten.vercel.app/proceso',
+  })
+
   const etapas = [
     {
       numero: '01',

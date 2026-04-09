@@ -1,4 +1,12 @@
+import { useSEO } from '../hooks/useSEO'
+
 function Bio() {
+  useSEO({
+    title: 'Aurelia Diaz — Barro & Fuego',
+    description: 'Historia y proceso creativo de Aurelia Diaz, ceramista en Iruya, Salta, Argentina. Del barro nace la forma.',
+    url: 'https://b-f-ten.vercel.app/bio',
+  })
+
   return (
     <div className="py-16 md:py-24">
       <div className="max-w-5xl mx-auto px-6">

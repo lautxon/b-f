@@ -1,6 +1,13 @@
 import { EnvelopeSimple, MapPin, CurrencyDollar, Wallet, Link } from '@phosphor-icons/react'
+import { useSEO } from '../hooks/useSEO'
 
 function Contacto() {
+  useSEO({
+    title: 'Contacto — Barro & Fuego',
+    description: 'Contacta a Aurelia Diaz para consultas, encargos personalizados o compras al por mayor.',
+    url: 'https://b-f-ten.vercel.app/contacto',
+  })
+
   return (
     <div className="py-16 md:py-24">
       <div className="max-w-4xl mx-auto px-6">

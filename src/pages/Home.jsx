@@ -2,6 +2,8 @@ import { useNavigate } from 'react-router-dom'
 import catalogSeed from '../data/catalog-seed.json'
 import ProductCard from '../components/ProductCard'
 import { useTimeOfDay, getHeroImage, getPeriodLabel } from '../hooks/useTimeOfDay'
+import { injectOrganizationSchema, injectWebsiteSchema } from '../lib/seo'
+import { useEffect } from 'react'
 
 function Home() {
   const navigate = useNavigate()
@@ -9,6 +11,12 @@ function Home() {
   const period = useTimeOfDay()
   const heroImage = getHeroImage(period)
   const periodLabel = getPeriodLabel(period)
+
+  useEffect(() => {
+    const cleanup1 = injectOrganizationSchema()
+    const cleanup2 = injectWebsiteSchema()
+    return () => { cleanup1(); cleanup2() }
+  }, [])
 
   return (
     <div>

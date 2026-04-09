@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import catalogSeed from '../data/catalog-seed.json'
 import ProductCard from '../components/ProductCard'
+import { useSEO } from '../hooks/useSEO'
 
 const CATEGORIAS = [
   { id: 'todas', nombre: 'Todas' },
@@ -9,6 +10,12 @@ const CATEGORIAS = [
 ]
 
 function Catalogo() {
+  useSEO({
+    title: 'Catalogo — Barro & Fuego',
+    description: 'Catalogo completo de ceramica artesanal de Aurelia Diaz. Objetos utilitarios y decorativos, hechos a mano en Iruya, Salta.',
+    url: 'https://b-f-ten.vercel.app/catalogo',
+  })
+
   const [categoriaActiva, setCategoriaActiva] = useState('todas')
 
   const filtradas =

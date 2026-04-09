@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://b-f-ten.vercel.app/sitemap.xml
