@@ -24,6 +24,7 @@ function Home() {
       <section className="relative py-32 md:py-48 border-b border-border overflow-hidden">
         {/* Imagen de fondo segun hora del dia */}
         <div
+          key={period}
           className="absolute inset-0"
           style={{
             backgroundImage: `url(${heroImage})`,

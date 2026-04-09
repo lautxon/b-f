@@ -39,11 +39,11 @@ function getPeriod() {
  */
 export function getHeroImage(period) {
   const images = {
-    amanecer: 'https://picsum.photos/seed/iruya-amanecer/1600/900',
-    manana: 'https://picsum.photos/seed/iruya-taller/1600/900',
-    tarde: 'https://picsum.photos/seed/iruya-vasijas/1600/900',
-    atardecer: 'https://picsum.photos/seed/iruya-atardecer/1600/900',
-    noche: 'https://picsum.photos/seed/iruya-noche/1600/900',
+    amanecer: 'https://picsum.photos/seed/sky-orange-dawn/1600/900',
+    manana: 'https://picsum.photos/seed/workshop-bright-light/1600/900',
+    tarde: 'https://picsum.photos/seed/golden-afternoon-sun/1600/900',
+    atardecer: 'https://picsum.photos/seed/sunset-red-valley/1600/900',
+    noche: 'https://picsum.photos/seed/starry-mountain-night/1600/900',
   }
   return images[period] || images.tarde
 }

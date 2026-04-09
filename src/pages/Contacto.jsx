@@ -63,7 +63,7 @@ function Contacto() {
               </h3>
 
               {/* Mercado Pago */}
-              <div className="mb-5 p-4 rounded-crisp bg-card border border-border">
+              <div className="p-4 rounded-crisp bg-card border border-border mb-5">
                 <div className="flex items-center gap-3 mb-3">
                   <Wallet size={18} className="text-terracotta" />
                   <span className="text-sm font-medium text-ink">
@@ -88,7 +88,7 @@ function Contacto() {
               </div>
 
               {/* Banco Macro */}
-              <div className="p-4 rounded-crisp bg-card border border-border">
+              <div className="p-4 rounded-crisp bg-card border border-border mb-5">
                 <div className="flex items-center gap-3 mb-3">
                   <CurrencyDollar size={18} className="text-ocre" />
                   <span className="text-sm font-medium text-ink">
@@ -121,7 +121,7 @@ function Contacto() {
               </div>
 
               {/* PayPal */}
-              <div className="p-4 rounded-crisp bg-card border border-border">
+              <div className="p-4 rounded-crisp bg-card border border-border mb-5">
                 <div className="flex items-center gap-3 mb-3">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.37 6.73a.83.83 0 0 0-.57-.32L10.25 6l-.03-.01a.5.5 0 0 0-.49.42l-.93 5.89a.5.5 0 0 0 .49.58h2.44a.5.5 0 0 0 .49-.42l.2-1.25a.83.83 0 0 1 .82-.7h.52a2.58 2.58 0 0 0 2.55-2.16l.29-1.48a.5.5 0 0 0-.49-.62h-.97z" fill="#D4956F"/>
