@@ -21,22 +21,23 @@ function Home() {
             backgroundImage: `url(${heroImage})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            opacity: 0.08,
+            opacity: 0.25,
             transition: 'opacity 1s ease',
           }}
         />
-        {/* Gradiente sutil */}
+        {/* Vignette: bordes oscuros, centro claro */}
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 pointer-events-none"
           style={{
-            backgroundImage: `radial-gradient(circle at 30% 50%, #C4775B 0%, transparent 50%),
-                              radial-gradient(circle at 70% 30%, #8B3A2F 0%, transparent 50%)`,
-            opacity: 0.06,
+            background: 'radial-gradient(ellipse at center, transparent 20%, rgba(28,18,16,0.6) 70%, rgba(28,18,16,0.95) 100%)',
           }}
         />
         <div className="relative max-w-5xl mx-auto px-6 text-center">
-          <p className="text-xs uppercase tracking-[0.2em] text-muted mb-6">
-            {periodLabel} -- 2700 msnm
+          <p className="text-xs uppercase tracking-[0.2em] text-terracotta mb-6" style={{ letterSpacing: '0.25em' }}>
+            {periodLabel}
+          </p>
+          <p className="text-[10px] uppercase tracking-[0.15em] text-muted mb-8">
+            Iruya, Salta -- 2700 msnm
           </p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl text-ink mb-6">
             Barro & Fuego
