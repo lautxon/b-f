@@ -28,7 +28,7 @@ function App() {
         } />
 
         {/* Public routes */}
-        <Route path="/" element={
+        <Route path="/*" element={
           <div className="min-h-screen flex flex-col">
             <Header />
             <main className="flex-1">
