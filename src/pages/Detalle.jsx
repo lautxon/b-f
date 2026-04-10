@@ -1,17 +1,16 @@
 import { useParams, useNavigate } from 'react-router-dom'
 import { ArrowLeft, EnvelopeSimple, CurrencyDollar } from '@phosphor-icons/react'
-import catalogSeed from '../data/catalog-seed.json'
 import { useEffect, useState } from 'react'
 import { injectProductSchema } from '../lib/seo'
 import { useSEO } from '../hooks/useSEO'
+import { useObra } from '../hooks/useCatalog'
 import { ShippingEstimator } from '../components/ShippingEstimator'
 
 function Detalle() {
   const { slug } = useParams()
   const navigate = useNavigate()
+  const { obra, loading } = useObra(slug)
   const [eurRate, setEurRate] = useState(null)
-
-  const obra = catalogSeed.find((o) => o.slug === slug)
 
   useEffect(() => {
     const fetchRate = async () => {
@@ -32,6 +31,14 @@ function Detalle() {
   useEffect(() => {
     if (obra) return injectProductSchema(obra)
   }, [obra])
+
+  if (loading) {
+    return (
+      <div className="py-32 text-center">
+        <p className="text-muted">Cargando pieza...</p>
+      </div>
+    )
+  }
 
   if (!obra) {
     return (
@@ -61,7 +68,6 @@ function Detalle() {
     minimumFractionDigits: 0,
   }).format(obra.precioArs)
 
-  // Links de pago
   const mpLink = `https://www.mercadopago.com.ar`
   const paypalEmail = 'aureliadiaz@gmail.com'
   const paypalSubject = `Compra Barro & Fuego: ${obra.nombre}`
@@ -155,7 +161,6 @@ function Detalle() {
 
             {/* Botones de accion */}
             <div className="flex flex-col gap-3">
-              {/* Mercado Pago - Argentina */}
               <a
                 href={mpLink}
                 target="_blank"
@@ -165,7 +170,6 @@ function Detalle() {
                 Comprar con Mercado Pago
               </a>
 
-              {/* PayPal - Internacional */}
               <a
                 href={paypalLink}
                 target="_blank"

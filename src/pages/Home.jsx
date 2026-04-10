@@ -1,13 +1,14 @@
 import { useNavigate } from 'react-router-dom'
-import catalogSeed from '../data/catalog-seed.json'
 import ProductCard from '../components/ProductCard'
 import { useTimeOfDay, getHeroImage, getPeriodLabel } from '../hooks/useTimeOfDay'
 import { injectOrganizationSchema, injectWebsiteSchema } from '../lib/seo'
-import { useEffect } from 'react'
+import { useCatalog } from '../hooks/useCatalog'
+import { useEffect, useState } from 'react'
 
 function Home() {
   const navigate = useNavigate()
-  const destacados = catalogSeed.slice(0, 4)
+  const { obras, loading } = useCatalog()
+  const destacados = obras.slice(0, 4)
   const period = useTimeOfDay()
   const heroImage = getHeroImage(period)
   const periodLabel = getPeriodLabel(period)

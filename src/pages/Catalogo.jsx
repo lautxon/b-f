@@ -1,13 +1,7 @@
 import { useState } from 'react'
-import catalogSeed from '../data/catalog-seed.json'
 import ProductCard from '../components/ProductCard'
+import { useCatalog } from '../hooks/useCatalog'
 import { useSEO } from '../hooks/useSEO'
-
-const CATEGORIAS = [
-  { id: 'todas', nombre: 'Todas' },
-  { id: 'objetos-utilitarios', nombre: 'Objetos utilitarios' },
-  { id: 'objetos-varios', nombre: 'Objetos varios' },
-]
 
 function Catalogo() {
   useSEO({
@@ -16,12 +10,26 @@ function Catalogo() {
     url: 'https://b-f-ten.vercel.app/catalogo',
   })
 
+  const { obras, categorias, loading } = useCatalog()
   const [categoriaActiva, setCategoriaActiva] = useState('todas')
+
+  const allCategorias = [
+    { nombre: 'Todas', slug: 'todas', descripcion: null },
+    ...categorias,
+  ]
 
   const filtradas =
     categoriaActiva === 'todas'
-      ? catalogSeed
-      : catalogSeed.filter((o) => o.categoria === categoriaActiva)
+      ? obras
+      : obras.filter((o) => o.categoria === categoriaActiva)
+
+  if (loading) {
+    return (
+      <div className="py-32 text-center">
+        <p className="text-muted">Cargando catalogo...</p>
+      </div>
+    )
+  }
 
   return (
     <div className="py-16 md:py-24">
@@ -38,12 +46,12 @@ function Catalogo() {
 
         {/* Filtros */}
         <div className="flex flex-wrap gap-2 mb-10">
-          {CATEGORIAS.map((cat) => (
+          {allCategorias.map((cat) => (
             <button
-              key={cat.id}
-              onClick={() => setCategoriaActiva(cat.id)}
+              key={cat.slug}
+              onClick={() => setCategoriaActiva(cat.slug)}
               className={`px-4 py-2 text-sm rounded-full transition-all duration-200 ${
-                categoriaActiva === cat.id
+                categoriaActiva === cat.slug
                   ? 'bg-terracotta text-canvas font-medium'
                   : 'bg-card border border-border text-charcoal hover:bg-card-hover'
               }`}
@@ -57,7 +65,7 @@ function Catalogo() {
         {filtradas.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filtradas.map((obra, index) => (
-              <ProductCard key={obra.id} obra={obra} index={index} />
+              <ProductCard key={obra.id || obra.slug} obra={obra} index={index} />
             ))}
           </div>
         ) : (
