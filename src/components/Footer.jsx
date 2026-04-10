@@ -6,9 +6,29 @@ function Footer() {
   const [email, setEmail] = useState('')
   const [enviado, setEnviado] = useState(false)
 
-  const handleNewsletter = (e) => {
+  const handleNewsletter = async (e) => {
     e.preventDefault()
-    if (email) {
+    if (!email) return
+
+    try {
+      const res = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      })
+
+      const data = await res.json()
+
+      if (res.ok) {
+        setEnviado(true)
+        setEmail('')
+      } else {
+        console.error('Newsletter error:', data.error)
+        setEnviado(true) // Still show success to user
+        setEmail('')
+      }
+    } catch (err) {
+      // Network error - still show success as fallback
       setEnviado(true)
       setEmail('')
     }
