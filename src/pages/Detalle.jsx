@@ -12,6 +12,14 @@ function Detalle() {
   const { obra, loading } = useObra(slug)
   const [eurRate, setEurRate] = useState(null)
 
+  // ALL hooks MUST be called before any early returns
+  useSEO({
+    title: obra ? `${obra.nombre} — Barro & Fuego` : 'Barro & Fuego',
+    description: obra ? obra.descripcion.slice(0, 150) : 'Catalogo online de ceramica artesanal de Iruya, Salta, Argentina.',
+    image: obra?.imagenUrl,
+    url: `https://b-f-ten.vercel.app/catalogo/${slug}`,
+  })
+
   useEffect(() => {
     const fetchRate = async () => {
       try {
@@ -50,13 +58,6 @@ function Detalle() {
       </div>
     )
   }
-
-  useSEO({
-    title: `${obra.nombre} — Barro & Fuego`,
-    description: obra.descripcion.slice(0, 150),
-    image: obra.imagenUrl,
-    url: `https://b-f-ten.vercel.app/catalogo/${obra.slug}`,
-  })
 
   const precioEur = eurRate
     ? (obra.precioArs / eurRate).toFixed(2)
