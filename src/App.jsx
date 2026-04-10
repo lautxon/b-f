@@ -10,6 +10,8 @@ import Bio from './pages/Bio'
 import Proceso from './pages/Proceso'
 import Testimonios from './pages/Testimonios'
 import Contacto from './pages/Contacto'
+import Blog from './pages/Blog'
+import BlogArticulo from './pages/BlogArticulo'
 import AdminLogin from './pages/AdminLogin'
 import Admin from './pages/Admin'
 
@@ -36,6 +38,8 @@ function App() {
                 <Route path="/catalogo/:slug" element={<Detalle />} />
                 <Route path="/bio" element={<Bio />} />
                 <Route path="/proceso" element={<Proceso />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogArticulo />} />
                 <Route path="/testimonios" element={<Testimonios />} />
                 <Route path="/contacto" element={<Contacto />} />
               </Routes>

@@ -59,6 +59,16 @@ function Header() {
             Testimonios
           </Link>
           <Link
+            to="/blog"
+            className={`text-sm tracking-wide transition-colors duration-200 ${
+              isActive('/blog')
+                ? 'text-ink font-medium'
+                : 'text-muted hover:text-ink'
+            }`}
+          >
+            Blog
+          </Link>
+          <Link
             to="/contacto"
             className={`text-sm tracking-wide transition-colors duration-200 ${
               isActive('/contacto')

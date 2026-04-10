@@ -248,8 +248,8 @@ export function ShippingEstimator({ obra }) {
           )}
 
           <p className="text-[10px] text-muted">
-            * Estimacion basada en tarifas de Correo Argentino y DHL internacional.
-            Los precios finales pueden variar segun el servicio y seguros elegidos.
+            * Estimacion orientativa basada en tarifas referenciales.
+            Los costos finales de envio se confirman por correo segun el servicio elegido y las condiciones de envio.
           </p>
         </div>
       )}
