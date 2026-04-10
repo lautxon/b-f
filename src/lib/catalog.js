@@ -1,11 +1,16 @@
 import { supabase } from '../lib/supabase'
 import catalogSeed from '../data/catalog-seed.json'
 
+function isSupabaseReady() {
+  return supabase !== null
+}
+
 /**
  * Fetches all available obras from Supabase.
  * Falls back to seed JSON data if tables don't exist.
  */
 export async function fetchObras() {
+  if (!isSupabaseReady()) return catalogSeed
   try {
     const { data, error } = await supabase
       .from('obras')
@@ -52,6 +57,7 @@ export async function fetchObras() {
  * Fetches a single obra by slug.
  */
 export async function fetchObraBySlug(slug) {
+  if (!isSupabaseReady()) return catalogSeed.find((o) => o.slug === slug)
   try {
     const { data, error } = await supabase
       .from('obras')
@@ -97,6 +103,13 @@ export async function fetchObraBySlug(slug) {
  * Fetches all categorias.
  */
 export async function fetchCategorias() {
+  if (!isSupabaseReady()) {
+    return [
+      { nombre: 'Todas', slug: 'todas', descripcion: null },
+      { nombre: 'Objetos utilitarios', slug: 'objetos-utilitarios', descripcion: null },
+      { nombre: 'Objetos varios', slug: 'objetos-varios', descripcion: null },
+    ]
+  }
   try {
     const { data, error } = await supabase
       .from('categorias')
